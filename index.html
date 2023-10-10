@@ -7,15 +7,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./resources/css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/my.css" />
+    <link rel="stylesheet" href="./resources/css/my.css" />
     <style></style>
   </head>
   <body>
     <header class="header">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Food For Thought</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -24,47 +35,272 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link" href="#">Book</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
             </form>
           </div>
         </div>
       </nav>
-    </body>header>
-    <main class="main">
-      <h1>Movie List</h1>
-      <div class="card">
-        <div class="card-header">
-          Movie 1
+    </header>
+    <main class="main bg-dark" data-bs-theme="dark">
+      <div class="top p-3 pb-md-4 mx-auto g-4">
+        <h1 class="title">Movie List</h1>
+        <div class="button-container">
+          <p>Choose an attractive film or Add your own</p>
+          <button type="button" class="btn btn-light" onclick="addPage()">
+            Add
+          </button>
         </div>
-        <img src="images/card-image.png" alt="" />
-        <div class="card-body">
-          <h5 class="card-title">Lorem</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas sed sem ut malesuada.</p>
-          <a href="#" class="btn btn-primary">More</a>
+      </div>
+
+      <div class="container">
+        <div class="cards-row row row-cols-1 row-cols-md-3 g-4">
+          <!-- 첫번째 행 -->
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0 card-inside">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/afteryang.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="After Yang"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">After Yang</h5>
+                    <p class="card-text">SF/Drama</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/arrival.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Arrival"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Arrival</h5>
+                    <p class="card-text">SF/Drama</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.9/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/gravity.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Gravity"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Gravity</h5>
+                    <p class="card-text">SF/Thriller</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--두번째 행-->
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/blackwidow.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Gravity"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Black Widow</h5>
+                    <p class="card-text">Action/Adventure</p>
+                    <p class="card-text">
+                      <small class="text-muted">5/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/hungergames.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Gravity"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Hunger Games</h5>
+                    <p class="card-text">Action/Adventure</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/annihilation.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Gravity"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Annihilation</h5>
+                    <p class="card-text">SF/Horror</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 세번째 행-->
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/beau.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Beau"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Beau is afraid</h5>
+                    <p class="card-text">Horror/Comedy</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/coraline.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Gravity"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Coraline</h5>
+                    <p class="card-text">Animation/Fantasy</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="card" onclick="viewPage()">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="./resources/img/vivarium.jpg"
+                    class="img-fluid rounded-start .card-image"
+                    alt="Gravity"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Vivarium</h5>
+                    <p class="card-text">Horror/Mistery</p>
+                    <p class="card-text">
+                      <small class="text-muted">4.8/5</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <footer class="footer">
-      THis is footer
-    </footer>
+    <div class="container">
+      <footer
+        class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <div class="col-md-4 d-flex align-items-center">
+          <a
+            href="/"
+            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+          >
+            <svg class="bi" width="30" height="24">
+              <use xlink:href="#bootstrap"></use>
+            </svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary" style="color: darkgray"
+            >© 2023 PP1, Handong
+          </span>
+        </div>
+      </footer>
+    </div>
   </body>
+  <script>
+    function viewPage() {
+      window.location.href = 'view.html';
+    }
+    function addPage() {
+      window.location.href = 'add.html';
+    }
+  </script>
 </html>

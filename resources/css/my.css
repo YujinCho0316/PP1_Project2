@@ -1,0 +1,24 @@
+body {
+  color: white;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card-img {
+  width: 33.33%;
+}
+
+.card-inside {
+  display: flex;
+  align-items: center;
+}
