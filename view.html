@@ -59,26 +59,62 @@
       </nav>
     </header>
 
-    <main class="main"></main>
-
-    <div class="container">
-      <footer
-        class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
-        <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="/"
-            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
-          >
-            <svg class="bi" width="30" height="24">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-          </a>
-          <span class="mb-3 mb-md-0 text-body-secondary" style="color: darkgray"
-            >© 2023 PP1, Handong
-          </span>
+    <main class="main">
+      <h2>View detail</h2>
+      <div class="container row-cols-2 view-main">
+        <div class="col view-image">
+          <img src="./resources/img/afteryang.jpg" class="view-image" />
         </div>
-      </footer>
-    </div>
+        <div class="col view-content">
+          <h4>After Yang</h4>
+          <p>Genre: SF/Drama</p>
+          <p>Release: 2021-01-21</p>
+          <p>Director: Kogonada</p>
+          <p>Actors: Colin Farrell, Jodie Turner-Smith</p>
+          <p>Watched: 2022-10-21</p>
+          <p>My rating: 4.5/5.0</p>
+          <p>Review: beautiful...</p>
+        </div>
+      </div>
+      <div class="btns">
+        <button type="button" class="btn btn-light" onclick="editPage()">
+          Edit
+        </button>
+        <button type="button" class="btn btn-light" onclick="deletePage()">
+          Delete
+        </button>
+      </div>
+    </main>
+
+    <footer
+      class="footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
+      <div class="col-md-4 d-flex align-items-center">
+        <a
+          href="/"
+          class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
+        >
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary" style="color: darkgray"
+          >© 2023 PP1, Handong
+        </span>
+      </div>
+    </footer>
   </body>
+  <script>
+    function editPage() {
+      window.location.href = 'edit.html';
+    }
+    function deletePage() {
+      if (confirm('정말로 삭제하시겠습니까?')) {
+        alert('삭제되었습니다.');
+        window.location.href = 'index.html';
+      } else {
+        alert('취소하였습니다.');
+      }
+    }
+  </script>
 </html>
