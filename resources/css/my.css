@@ -2,6 +2,7 @@ body {
   color: white;
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  font-family: 'Courier New', '나눔고딕', 'NanumGothic';
 }
 
 .button-container {
@@ -21,4 +22,54 @@ body {
 .card-inside {
   display: flex;
   align-items: center;
+}
+
+.add-main {
+  margin: auto;
+  margin-top: 2%;
+  width: 50%;
+  border-radius: 4px solid white;
+  padding: 10px;
+}
+
+input,
+textarea {
+  background-color: rgb(46, 49, 55);
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+}
+
+input[type='submit'] {
+  width: 15%;
+  background-color: darkgray;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: lightgray;
+}
+
+input[name='director']:focus {
+  transition: width 0.4s ease-in-out;
+}
+
+@media only screen and (max-width: 900px) {
+  input[type='file'],
+  textarea {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .add-main {
+    width: 80%;
+  }
 }
